@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed;
+    //movement
+    public float walkSpeed;
     private Vector3 currentPos;
     private Vector3 xPan;
     private Vector3 yPan;
 
+    //shoot
+    public float shootSpeed;
+    public GameObject bullet;
+    private Quaternion direction;
+
     void Start()
     {
-        if (speed == 0) { speed = 5; } //default value
+        if (walkSpeed == 0) { walkSpeed = 5; } //default value
         currentPos = this.gameObject.transform.position;
-        xPan = new Vector3(speed, 0, 0);
-        yPan = new Vector3(0, speed, 0);
+        xPan = new Vector3(1, 0, 0);
+        yPan = new Vector3(0, 1, 0);
     }
 
     // Update is called once per frame
@@ -23,21 +29,63 @@ public class Movement : MonoBehaviour
         this.transform.position = currentPos;
         //Debug.Log(this.transform.position);
 
+        //Movement
         if (Input.GetKey(KeyCode.W))
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos += yPan, (speed * Time.deltaTime));
+            currentPos = Vector3.MoveTowards(currentPos, currentPos += yPan, (walkSpeed * Time.deltaTime));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos -= xPan, (speed * Time.deltaTime));
+            currentPos = Vector3.MoveTowards(currentPos, currentPos -= xPan, (walkSpeed * Time.deltaTime));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos -= yPan, (speed * Time.deltaTime));
+            currentPos = Vector3.MoveTowards(currentPos, currentPos -= yPan, (walkSpeed * Time.deltaTime));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos += xPan, (speed * Time.deltaTime));
+            currentPos = Vector3.MoveTowards(currentPos, currentPos += xPan, (walkSpeed * Time.deltaTime));
+        }
+
+        //Shoot
+        if (Input.GetKeyDown(KeyCode.UpArrow)) //TODO change to "GetKey" after implementing a cooldown.
+        {
+            Shoot("up");
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Shoot("left");
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Shoot("down");
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Shoot("right");
+        }
+    }
+
+
+    void Shoot(string dir)
+    {
+        if (dir == "up")
+        {
+            return;
+        }
+        if (dir == "left")
+        {
+            return;
+        }
+        if (dir == "down")
+        {
+            return;
+        }
+        if (dir == "right")
+        {
+            //TODO set the rotation for other directions.
+            Instantiate(bullet, this.transform.position, direction);
+            return;
         }
     }
 }
