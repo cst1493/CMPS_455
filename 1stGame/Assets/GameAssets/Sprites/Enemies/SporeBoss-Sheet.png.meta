@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 570958bd7738c5c47a8ee55529407ea4
+guid: cd9f216ced6091f4d9fac4338a875e0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 601576792054991902
-    second: CharB_sheet_0
+      213: -6416350926708393655
+    second: SporeBoss-Sheet_0
   - first:
-      213: 8345896274938241145
-    second: CharB_sheet_1
+      213: 312593652340372736
+    second: SporeBoss-Sheet_1
   - first:
-      213: -8582155687420964401
-    second: CharB_sheet_2
+      213: 3599519835001638102
+    second: SporeBoss-Sheet_2
   - first:
-      213: 8881762418488242896
-    second: CharB_sheet_3
+      213: -7143374182836724698
+    second: SporeBoss-Sheet_3
+  - first:
+      213: -8064686426451055587
+    second: SporeBoss-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharB_sheet_0
+      name: SporeBoss-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,41 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1c8e83b7ea395800800000000000000
-      internalID: 601576792054991902
+      spriteID: 9493c43d3da84f6a0800000000000000
+      internalID: -6416350926708393655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharB_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97023ff817492d370800000000000000
-      internalID: 8345896274938241145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharB_sheet_2
+      name: SporeBoss-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc1dc2c5fde06e880800000000000000
-      internalID: -8582155687420964401
+      spriteID: 0053ac6454e865400800000000000000
+      internalID: 312593652340372736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharB_sheet_3
+      name: SporeBoss-Sheet_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +160,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d2f76dacdb524b70800000000000000
-      internalID: 8881762418488242896
+      spriteID: 6dcce37083014f130800000000000000
+      internalID: 3599519835001638102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SporeBoss-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c12562703addc90800000000000000
+      internalID: -7143374182836724698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SporeBoss-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c68767c6a741090800000000000000
+      internalID: -8064686426451055587
       vertices: []
       indices: 
       edges: []
