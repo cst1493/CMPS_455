@@ -272,7 +272,6 @@ GameObject:
   - component: {fileID: 257242442}
   - component: {fileID: 257242444}
   - component: {fileID: 257242443}
-  - component: {fileID: 257242445}
   m_Layer: 0
   m_Name: Char_Burris
   m_TagString: Untagged
@@ -324,21 +323,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &257242445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257242441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57b8d462e5d0536499324ff09e93602c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  rigidBody: {fileID: 7800825547624353924, guid: 0df203b073ddbeb4f8ba784a3bba6450,
-    type: 3}
 --- !u!1 &268469752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,8 +1077,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789343735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.04, y: 2.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.82, y: -0.87, z: 0}
+  m_LocalScale: {x: 0.42681336, y: 0.42681336, z: 0.42681336}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
