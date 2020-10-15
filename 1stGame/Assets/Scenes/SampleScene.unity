@@ -405,6 +405,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &364143652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4084508440332104763, guid: 0faf92db79885c1458d6481541f1c6a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1243398722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453036398
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,6 +853,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0faf92db79885c1458d6481541f1c6a6, type: 3}
+--- !u!1 &1255071400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9195679904456894982, guid: 6d034882ce7f5ab42abcbc1dd2cfd694,
+    type: 3}
+  m_PrefabInstance: {fileID: 1545940585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1345468519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 692232137440759622, guid: 4d445c897ea052b42b5599b9120516c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 189124576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1345468520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345468519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106b4667c6ba2174da38981e6bf146b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 10
+  SporeRed: {fileID: 364143652}
+  SporeBlack: {fileID: 0}
+  SporeGreen: {fileID: 0}
 --- !u!1 &1350674311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804811227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 106b4667c6ba2174da38981e6bf146b6, type: 3}
   m_Name: 
@@ -1111,6 +1145,28 @@ MonoBehaviour:
   SporeRed: {fileID: 0}
   SporeBlack: {fileID: 1161119675}
   SporeGreen: {fileID: 0}
+--- !u!1 &1814709901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9191938438762838242, guid: d5a6f7c67f854a74595adaa48a8dcc9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 849632829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1814709902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814709901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106b4667c6ba2174da38981e6bf146b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 10
+  SporeRed: {fileID: 0}
+  SporeBlack: {fileID: 0}
+  SporeGreen: {fileID: 1255071400}
 --- !u!1001 &1742213927298868462
 PrefabInstance:
   m_ObjectHideFlags: 0

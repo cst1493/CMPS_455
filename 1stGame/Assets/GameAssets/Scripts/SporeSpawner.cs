@@ -26,12 +26,34 @@ public class SporeSpawner : MonoBehaviour
     }
 
     IEnumerator SpawnAction()
-    {
-        while (enemyCount != 0)
-        {
-            Instantiate(SporeBlack, this.transform.position, this.transform.rotation);
-            enemyCount--;
-            yield return new WaitForSeconds(spawnTime);
-        }
+    {     
+            if (SporeBlack)
+            {
+                while (enemyCount != 0)
+                {
+                    Instantiate(SporeBlack, this.transform.position, this.transform.rotation);
+                    yield return new WaitForSeconds(spawnTime);
+                    enemyCount--;
+                }
+            }
+            if (SporeGreen)
+            {
+                while (enemyCount != 0)
+                {
+                    Instantiate(SporeGreen, this.transform.position, this.transform.rotation);
+                    yield return new WaitForSeconds(spawnTime);
+                    enemyCount--;
+                }
+            }
+            if (SporeRed)
+                {
+                while (enemyCount != 0)
+                {
+                    Instantiate(SporeRed, this.transform.position, this.transform.rotation);
+                    yield return new WaitForSeconds(spawnTime);
+                    enemyCount--;
+                }
+            }
+            
     }
 }
