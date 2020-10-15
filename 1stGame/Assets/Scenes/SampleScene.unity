@@ -772,6 +772,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1161119675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9096908864279725273, guid: 386fc8885faaf514291ed02a18ad451d,
+    type: 3}
+  m_PrefabInstance: {fileID: 112740237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1243398722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1083,6 +1089,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1804811227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5431910753211821204, guid: 5d27084e577b4bc4685c53738cd1dd8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1742213927298868462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1804811228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804811227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106b4667c6ba2174da38981e6bf146b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 10
+  SporeRed: {fileID: 0}
+  SporeBlack: {fileID: 1161119675}
+  SporeGreen: {fileID: 0}
 --- !u!1001 &1742213927298868462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1093,12 +1121,12 @@ PrefabInstance:
     - target: {fileID: 2943154947250061434, guid: 5d27084e577b4bc4685c53738cd1dd8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 2943154947250061434, guid: 5d27084e577b4bc4685c53738cd1dd8b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 4.43
       objectReference: {fileID: 0}
     - target: {fileID: 2943154947250061434, guid: 5d27084e577b4bc4685c53738cd1dd8b,
         type: 3}
