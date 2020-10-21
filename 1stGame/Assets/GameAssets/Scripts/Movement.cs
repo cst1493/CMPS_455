@@ -33,18 +33,22 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             currentPos = Vector3.MoveTowards(currentPos, currentPos += yPan, (walkSpeed * Time.deltaTime));
+            direction = Quaternion.Euler(0, 0, 90);
         }
         if (Input.GetKey(KeyCode.A))
         {
             currentPos = Vector3.MoveTowards(currentPos, currentPos -= xPan, (walkSpeed * Time.deltaTime));
+            direction = Quaternion.Euler(0, 0, 180);
         }
         if (Input.GetKey(KeyCode.S))
         {
             currentPos = Vector3.MoveTowards(currentPos, currentPos -= yPan, (walkSpeed * Time.deltaTime));
+            direction = Quaternion.Euler(0, 0, 270);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos += xPan, (walkSpeed * Time.deltaTime));
+            currentPos = Vector3.MoveTowards(currentPos, currentPos += xPan, (walkSpeed * Time.deltaTime)); 
+            direction = Quaternion.Euler(0, 0, 0);
         }
 
         //Shoot
@@ -85,6 +89,7 @@ public class Movement : MonoBehaviour
         {
             //TODO set the rotation for other directions.
             Instantiate(bullet, this.transform.position, direction);
+            
             return;
         }
     }
