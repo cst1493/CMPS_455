@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     //shoot
     public float shootSpeed;
     public GameObject bullet;
+    public GameObject lysol_canister;
     private Quaternion direction;
 
     void Start()
@@ -83,6 +84,7 @@ public class Movement : MonoBehaviour
         }
         if (dir == "down")
         {
+            Instantiate(lysol_canister, this.transform.position, Quaternion.identity);
             return;
         }
         if (dir == "right")
