@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spore
   - SporeBlack
+  - item
   layers:
   - Default
   - TransparentFX

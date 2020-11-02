@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: ce1b79dffd9752043a00ee3a90053c1b
+guid: 444ed0baec5658f44bb60aa00c3aa9d5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - bullet: {instanceID: 0}
-  - lysol: {fileID: 238274570147207599, guid: 88fa4fca485f87f4492a7d13d845c625, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
