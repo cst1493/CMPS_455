@@ -5,93 +5,93 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     //movement
-    public float walkSpeed;
-    private Vector3 currentPos;
-    private Vector3 xPan;
-    private Vector3 yPan;
+    Rigidbody2D body;
+    float horizontal;
+    float vertical;
+    public float runSpeed = 5.0f;
 
     //shoot
-    public float shootSpeed;
     public GameObject bullet;
     public GameObject lysol_canister;
     private Quaternion direction;
+    private float shootReady = 0;
+    public float bulletCD = 0.15f;
+    private float lysolReady = 0;
+    public float lysolCD = 5.0f;
+
+    //keybindings
+    public KeyCode moveUp;
+    public KeyCode moveDown;
+    public KeyCode moveLeft;
+    public KeyCode moveRight;
+    public KeyCode actionShoot;
+    public KeyCode actionLysol;
 
     void Start()
     {
-        if (walkSpeed == 0) { walkSpeed = 5; } //default value
-        currentPos = this.gameObject.transform.position;
-        xPan = new Vector3(1, 0, 0);
-        yPan = new Vector3(0, 1, 0);
+        body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        this.transform.position = currentPos;
-        //Debug.Log(this.transform.position);
-
         //Movement
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(moveUp))
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos += yPan, (walkSpeed * Time.deltaTime));
+            vertical = 1;
             direction = Quaternion.Euler(0, 0, 90);
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(moveDown))
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos -= xPan, (walkSpeed * Time.deltaTime));
-            direction = Quaternion.Euler(0, 0, 180);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos -= yPan, (walkSpeed * Time.deltaTime));
+            vertical = -1;
             direction = Quaternion.Euler(0, 0, 270);
         }
-        if (Input.GetKey(KeyCode.D))
+        else vertical = 0;
+
+        //remove "&& vertical == 0" to allow diagonal movement
+        if (Input.GetKey(moveRight) && vertical == 0) 
         {
-            currentPos = Vector3.MoveTowards(currentPos, currentPos += xPan, (walkSpeed * Time.deltaTime)); 
+            horizontal = 1;
             direction = Quaternion.Euler(0, 0, 0);
         }
+        else if (Input.GetKey(moveLeft) && vertical == 0)
+        {
+            horizontal = -1;
+            direction = Quaternion.Euler(0, 0, 180);
+        }
+        else horizontal = 0;
 
-        //Shoot
-        if (Input.GetKeyDown(KeyCode.UpArrow)) //TODO change to "GetKey" after implementing a cooldown.
+        //Player Actions
+        if (Input.GetKey(actionShoot))
         {
-            Shoot("up");
+            Action("shoot");
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(actionLysol))
         {
-            Shoot("left");
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Shoot("down");
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Shoot("right");
+            Action("lysol");
         }
     }
-
-
-    void Shoot(string dir)
+    void FixedUpdate()
     {
-        if (dir == "up")
+        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
+    void Action(string action)
+    {
+        float t = Time.time;
+
+        if (action == "shoot")
         {
-            return;
+            if (shootReady <= t) {
+                shootReady = t + bulletCD;
+                Instantiate(bullet, this.transform.position, direction);
+            } return;
         }
-        if (dir == "left")
+        else if (action == "lysol")
         {
-            return;
-        }
-        if (dir == "down")
-        {
-            Instantiate(lysol_canister, this.transform.position, Quaternion.identity);
-            return;
-        }
-        if (dir == "right")
-        {
-            //TODO set the rotation for other directions.
-            Instantiate(bullet, this.transform.position, direction);
-            
+            if (lysolReady <= t) {
+                lysolReady = t + lysolCD;
+                Instantiate(lysol_canister, this.transform.position, Quaternion.identity);
+            }
             return;
         }
     }
