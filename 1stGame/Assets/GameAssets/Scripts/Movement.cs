@@ -78,7 +78,7 @@ public class Movement : MonoBehaviour
     void Action(string action)
     {
         float t = Time.time;
-
+        bullet.tag = "PlayerBullet";
         if (action == "shoot")
         {
             if (shootReady <= t) {

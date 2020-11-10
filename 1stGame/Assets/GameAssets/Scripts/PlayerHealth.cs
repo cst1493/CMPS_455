@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBurris : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
@@ -18,10 +18,19 @@ public class PlayerBurris : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+       
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("SporeGreen") || collision.gameObject.tag == "SporeBlack" || collision.gameObject.tag == "SporeRed")
         {
-            TakeDamage(20);
+            TakeDamage(5);
+        } else if (collision.gameObject.CompareTag("SporeGreenSpawner") || collision.gameObject.tag == "SporeBlackSpawner" || collision.gameObject.tag == "SporeRedSpawner")
+        {
+            TakeDamage(15);
         }
+
     }
 
 

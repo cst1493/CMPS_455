@@ -7,6 +7,12 @@ TagManager:
   - Spore
   - SporeBlack
   - item
+  - SporeGreen
+  - SporeRed
+  - PlayerBullet
+  - SporeGreenSpawner
+  - SporeRedSpawner
+  - SporeBlackSpawner
   layers:
   - Default
   - TransparentFX
