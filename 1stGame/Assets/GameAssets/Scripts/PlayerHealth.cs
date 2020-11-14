@@ -17,14 +17,24 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("SporeGreen") || collision.gameObject.tag == "SporeBlack" || collision.gameObject.tag == "SporeRed")
+        if (collision.gameObject.CompareTag("SporeGreen") || collision.gameObject.tag == "SporeBlack" || collision.gameObject.tag == "SporeRed")
         {
             TakeDamage(5);
         } else if (collision.gameObject.CompareTag("SporeGreenSpawner") || collision.gameObject.tag == "SporeBlackSpawner" || collision.gameObject.tag == "SporeRedSpawner")
         {
             TakeDamage(15);
-        }
+        } else if (collision.gameObject.CompareTag("mask") && currentHealth <maxHealth)
+        {
 
+            if (currentHealth <= 80)
+            {
+                TakeDamage(-20);
+            } else if (currentHealth > 80)
+            {
+                TakeDamage(-(100 - currentHealth));
+            }
+            GameObject.Destroy(collision.gameObject);
+        }
         if ( (currentHealth <= 0) && playerDeathEnabled )
         {
             GameObject.Destroy(gameObject);
