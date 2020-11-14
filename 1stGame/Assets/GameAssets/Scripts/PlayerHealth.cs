@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public bool playerDeathEnabled;
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +25,17 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(15);
         }
 
+        if ( (currentHealth <= 0) && playerDeathEnabled )
+        {
+            GameObject.Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            //accessed exit door. Remove player and end level.
+            Debug.Log("Player completed the level");
+            GameObject.Destroy(gameObject);
+        }
     }
 
 

@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106b4667c6ba2174da38981e6bf146b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 10
+  enemyCount: 100
   SporeRed: {fileID: 0}
   SporeBlack: {fileID: 3603659202526903372, guid: 820c8bb08d6b0f145812c013d1e38a9c,
     type: 3}

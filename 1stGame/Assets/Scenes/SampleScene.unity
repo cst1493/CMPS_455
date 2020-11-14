@@ -555,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864006f1f3f718b4e94bd019ca89d143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDeathEnabled: 0
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1935916924}
@@ -855,6 +856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319442379}
+  - component: {fileID: 319442380}
   m_Layer: 0
   m_Name: ExitDoorSpawner
   m_TagString: Untagged
@@ -870,12 +872,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319442378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1953971510}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &319442380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319442378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afcb636c0caf5274b99f09bfa8428d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 5008902432300831503, guid: 6bc47e4a04b56544585df9bbd4060008, type: 3}
+  timeBeforeSpawning: 20
 --- !u!1001 &350604916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2001,6 +2017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864006f1f3f718b4e94bd019ca89d143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDeathEnabled: 0
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 2055807240}
