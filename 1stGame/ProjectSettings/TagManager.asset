@@ -13,6 +13,7 @@ TagManager:
   - SporeGreenSpawner
   - SporeRedSpawner
   - SporeBlackSpawner
+  - mask
   layers:
   - Default
   - TransparentFX
