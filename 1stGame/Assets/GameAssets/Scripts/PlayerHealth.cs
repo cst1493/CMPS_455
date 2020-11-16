@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -26,10 +27,10 @@ public class PlayerHealth : MonoBehaviour
         } else if (collision.gameObject.CompareTag("mask") && currentHealth <maxHealth)
         {
 
-            if (currentHealth <= 80)
+            if (currentHealth <= 60)
             {
-                TakeDamage(-20);
-            } else if (currentHealth > 80)
+                TakeDamage(-40);
+            } else if (currentHealth > 60)
             {
                 TakeDamage(-(100 - currentHealth));
             }
@@ -42,9 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Finish"))
         {
-            //accessed exit door. Remove player and end level.
-            Debug.Log("Player completed the level");
-            GameObject.Destroy(gameObject);
+            SceneManager.LoadScene(2);
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -62,5 +63,6 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("isOpen", false);
         Debug.Log("end conversation");
+        SceneManager.LoadScene(1);
     }
 }
