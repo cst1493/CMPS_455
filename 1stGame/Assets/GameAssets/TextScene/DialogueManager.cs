@@ -9,21 +9,25 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
 
     private Queue<string> sentences;
+    private Queue<string> names;
     void Start()
     {
         sentences = new Queue<string>();
+        names = new Queue<string>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("isOpen", true);
-        //Debug.Log("Starting conversation with " + dialogue.name);
-        nameText.text = dialogue.name;
-
         sentences.Clear();
+        names.Clear();
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
+        }
+        foreach (string name in dialogue.name)
+        {
+            names.Enqueue(name);
         }
         DisplayNextSentence();
     }
@@ -35,8 +39,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
+        string name = names.Dequeue();
+        
+        nameText.text = name;
 
-        //dialogueText.text = sentence;
         StopAllCoroutines(); //stop previous TypeSentence if player skips previous text.
         StartCoroutine(TypeSentence(sentence));
 
