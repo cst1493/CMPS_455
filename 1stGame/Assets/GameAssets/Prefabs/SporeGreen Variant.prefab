@@ -51,6 +51,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+--- !u!114 &3194250490985106661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608590727683472999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b360ca5119919d44abee950fa45561c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2606441131195143265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 9195679904456894982, guid: 6d034882ce7f5ab42abcbc1dd2cfd694,
         type: 3}
       propertyPath: m_Name
-      value: SporeGreen
+      value: SporeGreen Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d034882ce7f5ab42abcbc1dd2cfd694, type: 3}
