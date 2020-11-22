@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864006f1f3f718b4e94bd019ca89d143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDeathEnabled: 0
+  playerDeathEnabled: 1
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1935916924}
@@ -891,7 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 5008902432300831503, guid: 6bc47e4a04b56544585df9bbd4060008, type: 3}
-  timeBeforeSpawning: 20
+  timeBeforeSpawning: 45
 --- !u!1001 &350604916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864006f1f3f718b4e94bd019ca89d143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDeathEnabled: 0
+  playerDeathEnabled: 1
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 2055807240}
